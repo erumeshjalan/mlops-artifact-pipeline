@@ -51,7 +51,7 @@ jobs:
           python src/train.py
 
       - name: Upload model artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: trained-model
           path: model_train.pkl
@@ -75,7 +75,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Download model artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: trained-model
           path: .
