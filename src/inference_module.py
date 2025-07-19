@@ -13,7 +13,8 @@ def predict(model, input_data):
     return model.predict(input_array)
 
 if __name__ == "__main__":
-    sample_input = [5.1, 3.5, 1.4, 0.2]
+    # For manual testing
     model = load_model()
+    sample_input = [0.0] * 64  # Adjust length based on model's expected input
     prediction = predict(model, sample_input)
     print(f"Prediction: {prediction}")
